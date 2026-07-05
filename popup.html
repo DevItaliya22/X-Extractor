@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X Profile Extractor</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <img src="icons/icon32.png" alt="" class="logo" />
+        <div>
+          <h1>X Extractor</h1>
+          <p class="subtitle">Pull posts & metrics from any X page</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <label class="field-label" for="tabSelect">Open X / Twitter tab</label>
+      <select id="tabSelect" class="select">
+        <option value="">Loading tabs…</option>
+      </select>
+      <p id="noTabsHint" class="hint" style="display:none;">
+        No open X tab found. Open <code>x.com</code> in another tab and reopen this popup.
+      </p>
+    </section>
+
+    <section class="section actions">
+      <button id="extractBtn" class="btn btn-primary">Extract from this tab</button>
+      <button id="openResultsBtn" class="btn btn-ghost">View saved results</button>
+    </section>
+
+    <div id="status" class="status" style="display:none;"></div>
+    <div id="error" class="error" style="display:none;"></div>
+
+    <footer class="footer">
+      <span>v1.1 · Open source</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
